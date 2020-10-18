@@ -1,0 +1,29 @@
+.custom-background {
+  background: url("ocean.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  }
+
+  .swal2-modal {
+    background: url("shark.jpg") !important;
+  }
+
+  .swal2-title{
+    color: blue !important;
+  }
+
+  .swal2-cancel{
+    color: black !important;
+    background: #00ffea !important;
+  }
+
+  .swal2-confirm{
+    color: black !important;
+    background: #00ffea !important;
+  }
+
+  .swal2-content{
+    color: #06f826 !important;
+   
+  }
