@@ -37,7 +37,7 @@ class TaskService {
     tasks.push(new Task(newTask))
     ProxyState.tasks = tasks
   }
-
 }
+
 
 export const taskService = new TaskService();

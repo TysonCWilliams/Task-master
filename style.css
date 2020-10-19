@@ -40,5 +40,9 @@
 
    .navbar-custom-icon {
      font-size: 1.5rem;
-     color: #07fcd3;
+     color: #1afa06;
+   }
+   
+   .navbar-custom-content{
+     background-color: #050505 !important;
    }
