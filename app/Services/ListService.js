@@ -14,18 +14,16 @@ class ListService {
       imageWidth: 400,
       imageHeight: 200,
       title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      text: "You won't be able to change this!",
       icon: 'info',
       showCancelButton: true,
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'No, cancel!',
-      reverseButtons: true
+      reverseButtons: false
     }).then((result) => {
       if (result.isConfirmed) {
         ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
         ProxyState.tasks = ProxyState.tasks.filter(t => t.listId != id)
-        console.log(ProxyState.lists);
-        console.log(ProxyState.tasks);
       }
     })
 }
@@ -38,7 +36,6 @@ class ListService {
     let lists = ProxyState.lists
     lists.push(new List(blankList))
     ProxyState.lists = lists
-    console.log(ProxyState.lists);
   }
 
 }

@@ -15,15 +15,30 @@
 
   .swal2-cancel{
     color: black !important;
-    background: #00ffea !important;
+    background: #ff3300 !important;
   }
 
   .swal2-confirm{
     color: black !important;
-    background: #00ffea !important;
+    background: #00ff2a !important;
   }
 
   .swal2-content{
-    color: #06f826 !important;
-   
-  }
+    color: #06f9d8 !important;
+   }
+
+   .task-card{
+    background-color: rgba(0,0,0,.5);
+     color: #07fa07;
+   }
+
+   .task-title {
+     position: relative;
+     width: 90%;
+     font-weight: 100;
+   }
+
+   .navbar-custom-icon {
+     font-size: 1.5rem;
+     color: #07fcd3;
+   }

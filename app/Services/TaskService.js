@@ -23,11 +23,10 @@ class TaskService {
       showCancelButton: true,
       confirmButtonText: 'Yes, delete it!',
       cancelButtonText: 'No, cancel!',
-      reverseButtons: true
+      reverseButtons: false
     }).then((result) => {
       if (result.isConfirmed) {
       ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
-      console.log(ProxyState.tasks);
       }
     })
 
@@ -37,7 +36,6 @@ class TaskService {
     let tasks = ProxyState.tasks
     tasks.push(new Task(newTask))
     ProxyState.tasks = tasks
-    console.log(ProxyState.tasks);
   }
 
 }

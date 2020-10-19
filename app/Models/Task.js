@@ -12,9 +12,10 @@ export default class Task {
   get Template() {
 
     return /*html*/`
-        <div class="col-12 border rounded shadow-lg">
-            <h1>${this.title} <button class="text-danger close mt-3 float-right"
-             onclick="app.taskController.delete('${this.id}')"><span>&times;</span></button></h1>
+        <div class="col-12 ml-2 mr-2">
+          
+          <h3 class="task-title">${this.title}<button class="close mt-2"
+          onclick="app.taskController.delete('${this.id}')"><span class="text-danger">&times;</span></button></h3> 
         </div>
         `
   }

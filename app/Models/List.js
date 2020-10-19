@@ -12,17 +12,21 @@ export default class List {
   get Template() {
 
     return /*html*/`
-    <div class="col-4 border rounded shadow-lg">
+    <div class="col-4 pb-4">
+      <div class="border rounded shadow-lg pb-2 pl-2 pr-2 pt-2">
         <h1>${this.title} <button class="text-danger close mt-3" onclick="app.listController.delete('${this.id}')"><span>&times;</span></button></h1>
         <form onsubmit="app.taskController.create(event, '${this.id}')">
                 <div class="form-group">
                     <input type="text" name="taskTitle" class="form-control" placeholder="Enter Task Title here...">
-                    <button type="submit" name="" id="" class="btn btn-dark btn-lg btn-block">Create</button>
+                    <button type="submit" name="" id="" class="btn btn-dark btn-lg">Create New Task</button>
                 </div>
         </form>
-        <h5>Tasks:</h5>
+        <div class="card task-card pb-3">
+        <h2 class="ml-2">Tasks:</h1>
         <div id="tasks" class="row">
             ${this.Tasks}
+        </div>
+        </div>
         </div>
     </div>
     `
@@ -30,7 +34,6 @@ export default class List {
   get Tasks() {
     let template = ""
     let tasks = ProxyState.tasks.filter(t => t.listId == this.id)
-    console.log(tasks)
     tasks.forEach(t => template += t.Template)
     return template
   }

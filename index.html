@@ -18,29 +18,36 @@
     <div class="custom-background">
 
         <header>
-            <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+            <nav class="navbar navbar-dark navbar-expand bg-dark">
                 <a class="navbar-brand" href="#">
-                    <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                    <span class="ml-2">Taskmaster</span>
+                    <i class="fas fa-list-alt navbar-custom-icon"></i>
+                    <span class="ml-2 text-info">Taskmaster</span>
                 </a>
             </nav>
         </header>
         <main>
             <div id="app" class="container-fluid">
                 <div class="row">
-                    <form class="col-12" onsubmit="app.listController.create(event)">
-                        <div class="form-group">
-                            <input type="text" name="title" class="form-control" placeholder="Enter List Title here...">
-                            <button type="submit" name="" id="" class="btn btn-primary btn-lg btn-block">List</button>
-                        </div>
-                    </form>
+                    <div class="col-4 ml-3">
+                        <form onsubmit="app.listController.create(event)">
+                            <div class="form-group">
+                                <input type="text" name="title" class="form-control mt-2"
+                                    placeholder="Enter List Title here...">
+                                <button type="submit" name="" id="" class="btn btn-info btn-lg btn-block mt-2">Create
+                                    New List</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div id="lists" class="row">
+                <div class="container-fluid">
 
+                    <div id="lists" class="row">
+                        
+                    </div>
                 </div>
             </div>
         </main>
-        <footer class="container-fluid bg-dark text-light fixed-bottom">
+        <footer class="container-fluid bg-dark text-primary fixed-bottom">
             <div class="row text-center">
                 <div class="col">
                     <p><small>Made with love by Codeworks</small></p>
